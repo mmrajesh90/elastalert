@@ -9,7 +9,7 @@ RUN pip install -r requirements.txt \
  && python ./setup.py install
 
 RUN pip uninstall elasticsearch -y \
- && pip install elasticsearch
+ && pip install "elasticsearch<7"
 
 RUN mkdir -p /etc/elastalert
 
