@@ -8,7 +8,7 @@ RUN wget -O- https://github.com/Yelp/elastalert/archive/v0.1.14.tar.gz \
 RUN pip install -r requirements.txt \
  && python ./setup.py install
 
-RUN pip uninstall elasticsearch \
+RUN pip uninstall elasticsearch -y \
  && pip install elasticsearch
 
 RUN mkdir -p /etc/elastalert
